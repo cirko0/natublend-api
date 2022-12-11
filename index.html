@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>api-natublend</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Natublend API v1 Documentation</h1>
+      <div class="http__request">
+        <h2 class="http__request--title">Get all drinks/Create drink</h2>
+        <p>
+          Allowed methods: <span class="highlighted-text">GET</span>
+          <span class="highlighted-text">POST</span>
+        </p>
+        <p>GET: returns a list of drinks for a specific search query</p>
+        <p>POST: Creates a new drink</p>
+        <p>
+          Path:
+          <a
+            href="https://natublend.cyclic.app/api/v1/drinks"
+            target="_blank"
+            class="highlighted-text"
+            >https://natublend.cyclic.app/api/v1/drinks</a
+          >
+        </p>
+      </div>
+      <div class="parameters">
+        <h3 class="parameters--title">Parameters</h3>
+        <table>
+          <tbody>
+            <tr>
+              <th>Parameter</th>
+              <th>Required</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>fieldName</td>
+              <td>No</td>
+              <td>
+                Filters only the drinks with that [fieldName] value
+                <span class="highlighted-text">variant=regular</span>
+              </td>
+            </tr>
+            <tr>
+              <td>fieldName+[operator]</td>
+              <td>No</td>
+              <td>
+                Filters the drinks with (greater, less, equal...) value than the
+                [fieldName]
+                <span class="highlighted-text">price[gt]=4</span>
+              </td>
+            </tr>
+            <tr>
+              <td>sort</td>
+              <td>No</td>
+              <td>
+                Sorts all drinks
+                <span class="highlighted-text">sort=price, createdAt</span>
+              </td>
+            </tr>
+            <tr>
+              <td>fields</td>
+              <td>No</td>
+              <td>
+                You get only the fields you set
+                <span class="highlighted-text">fields=price, title, color</span>
+              </td>
+            </tr>
+            <tr>
+              <td>page</td>
+              <td>No</td>
+              <td>
+                You get only the fields you set
+                <span class="highlighted-text">fields=price, title, color</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Example url:
+          <a
+            href=" https://natublend.cyclic.app/api/v1/drinks?variant=regular&price[gte]=5&sort=price,createdAt&fields=price,color,title,createdAt&page=1&limit=5"
+            target="_blank"
+            class="highlighted-text"
+          >
+            https://natublend.cyclic.app/api/v1/drinks?variant=regular&price[gte]=5&sort=price,createdAt&fields=price,color,title,createdAt&page=1&limit=5
+          </a>
+        </p>
+      </div>
+      <!--Second request-->
+      <div class="http__request">
+        <h2 class="http__request--title">
+          Get Drink/Create Drink/Update Drink
+        </h2>
+        <p>
+          Allowed methods: <span class="highlighted-text">GET</span>
+          <span class="highlighted-text">DELETE</span>
+          <span class="highlighted-text">PATCH</span>
+        </p>
+        <p>GET: returns drink</p>
+        <p>DELETE: deletes drink</p>
+        <p>PATCH: updates drink</p>
+        <p>
+          Path:
+          <a
+            href="https://natublend.cyclic.app/api/v1/drinks/63811f0f8886a83b6f19cf69"
+            target="_blank"
+            class="highlighted-text"
+            >https://natublend.cyclic.app/api/v1/drinks/63811f0f8886a83b6f19cf69</a
+          >
+        </p>
+      </div>
+      <div class="parameters">
+        <h3 class="parameters--title">Parameters</h3>
+        <table>
+          <tbody>
+            <tr>
+              <th>Parameter</th>
+              <th>Required</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>id</td>
+              <td>Yes</td>
+              <td>The ID of drink</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
