@@ -7,12 +7,22 @@ app.use(express.json()); // VERY IMPORTANT
 
 // API open for all users
 // Omogucavam odredjenom hostu da uzima podatke iz baze
-app.use(
-  cors(
-    { credentials: true, origin: 'http://localhost:5173' },
-    { credentials: true, origin: 'https://natublend.netlify.app' }
-  )
-); //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+app.use(cors()); //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+const whitelist = ['http://localhost:5173', 'https://natublend.netlify.app'];
+
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+};
+
+corsOptions();
 
 // Adding html and css
 
