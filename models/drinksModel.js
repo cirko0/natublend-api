@@ -9,6 +9,11 @@ const drinksSchema = new mongoose.Schema({
     required: [true, 'A drink must have name!'],
     trim: true,
   },
+  id: {
+    type: Number,
+    unique: true,
+    required: [true, 'Drink must have id'],
+  },
   price: {
     type: Number,
     required: [true, 'A drink must have price!'],
