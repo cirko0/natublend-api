@@ -13,16 +13,19 @@ const allowedDomains = [
   'http://localhost:5173',
   'https://natublend.netlify.app',
 ];
+
+// Sta je ovo da me ubijes ne znam
 app.use(
   cors({
-    origin: function (origin, callback) {
-      // bypass the requests with no origin (like curl requests, mobile apps, etc )
-      if (!origin) return callback(null, true);
+    origin: function (url, callback) {
+      // callback(message, enableCors)
+      if (!url) return callback(null, false);
 
-      if (allowedDomains.indexOf(origin) === -1) {
-        const msg = `This site ${origin} does not have an access. Only specific domains are allowed to access it.`;
+      if (allowedDomains.indexOf(url) === -1) {
+        const msg = `This site ${url} does not have an access. Only specific domains are allowed to access it.`;
         return callback(new Error(msg), false);
       }
+
       return callback(null, true);
     },
   })
