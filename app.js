@@ -7,8 +7,12 @@ app.use(express.json()); // VERY IMPORTANT
 
 // API open for all users
 // Omogucavam odredjenom hostu da uzima podatke iz baze
-app.use(cors({ credentials: true, origin: 'http://localhost:5173' })); //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-app.use(cors({ credentials: true, origin: 'https://natublend.netlify.app' })); //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+app.use(
+  cors(
+    { credentials: true, origin: 'http://localhost:5173' },
+    { credentials: true, origin: 'https://natublend.netlify.app' }
+  )
+); //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // Adding html and css
 
