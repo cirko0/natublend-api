@@ -1,6 +1,8 @@
 const cors = require('cors'); //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 const express = require('express');
+const AppError = require('./utils/appError');
 const drinkRouter = require('./routes/drinkRoutes');
+const globalErrorHandler = require('./controllers/errorController');
 
 const app = express();
 app.use(express.json()); // VERY IMPORTANT
@@ -44,5 +46,15 @@ app.get('/style.css', (req, res) => {
 // Mounting
 
 app.use('/api/v1/drinks', drinkRouter);
+
+// ERROR HANDLING IS ALWAYS ON THE BOTTOM
+
+// 1. HANDLING UNHANDLED ROUTES
+app.all('*', (req, res, next) => {
+  next(new AppError(`Can't find ${req.originalUrl} on this server!`, 400));
+});
+
+// 2. IMPLEMENTING A GLOBAL ERROR HANDLING
+app.use(globalErrorHandler);
 
 module.exports = app;

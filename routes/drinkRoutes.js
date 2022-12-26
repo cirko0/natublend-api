@@ -7,6 +7,9 @@ const drinkController = require('../controllers/drinkController');
 const router = express.Router();
 
 // Routing
+router
+  .route('/top-5-drinks')
+  .get(drinkController.aliasTopDrinks, drinkController.getAllDrinks);
 
 router
   .route('/')

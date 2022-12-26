@@ -4,8 +4,8 @@
   "description": "Natublend Api",
   "main": "app.js",
   "scripts": {
-    "start": "node server.js",
-    "start:prod": "set NODE_ENV=production&&node server.js"
+    "start": "nodemon server.js",
+    "start:prod": "NODE_ENV=production nodemon server.js"
   },
   "author": "Ivan Cirkovic",
   "license": "ISC",
@@ -15,7 +15,8 @@
     "express": "^4.18.2",
     "live-server": "^1.2.2",
     "mongoose": "^5.13.15",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.20"
   },
   "devDependencies": {
     "eslint": "^8.27.0",
