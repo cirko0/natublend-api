@@ -9,7 +9,7 @@ process.on('uncaughtException', err => {
   // Shuting down the app
   process.exit(1);
 });
-
+ 
 dotenv.config({ path: './config.env' }); // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 const app = require('./app');
 

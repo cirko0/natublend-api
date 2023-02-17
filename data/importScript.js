@@ -2,7 +2,7 @@ const fs = require('fs');
 const mongoose = require('mongoose');
 
 const dotenv = require('dotenv');
-
+ 
 const Drink = require('../models/drinksModel');
 
 dotenv.config({ path: '../config.env' });

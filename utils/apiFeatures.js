@@ -1,5 +1,5 @@
 // REFACTORING API FEATURES
-
+ 
 class APIFeatures {
   constructor(query, queryString) {
     this.query = query;
