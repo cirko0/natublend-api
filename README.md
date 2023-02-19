@@ -1,4 +1,4 @@
-# [NATUBLEND-API]('https://natublend.netlify.app/')
+# [NATUBLEND-API](https://natublend.netlify.app/)
 
 ![Express](https://img.shields.io/badge/Made%20with-Express-1ED760) [![Linux](https://svgshare.com/i/Zhy.svg)](https://svgshare.com/i/Zhy.svg) ![VSCode](https://img.shields.io/badge/Made%20for-VSCode-1f425f) 
 
