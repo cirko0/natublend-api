@@ -1,6 +1,8 @@
 # [NATUBLEND-API](https://natublend.netlify.app/)
 
-![Express](https://img.shields.io/badge/Made%20with-Express-1ED760) [![Linux](https://svgshare.com/i/Zhy.svg)](https://svgshare.com/i/Zhy.svg) ![VSCode](https://img.shields.io/badge/Made%20for-VSCode-1f425f) 
+![Express](https://img.shields.io/badge/Made%20with-Express-1ED760) ![VSCode](https://img.shields.io/badge/Made%20for-VSCode-1f425f) 
+
+![natublend-website](https://i.imgur.com/kZl0kGe.png)
 
 🎉 I'm thrilled to have created my first backend project! 🙌🏻 Using Express and MongoDB, I was able to build a RESTful API that enables clients to interact with my server using HTTP requests. It supports CRUD operations on my MongoDB database and I'm proud to have designed an API that is scalable and performant. 🚀 I learned a lot through the process and look forward to building more complex backend projects in the future. 💪🏻
 
