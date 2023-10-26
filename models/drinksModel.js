@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // Schema
-
+  
 const drinksSchema = new mongoose.Schema({
   title: {
     type: String,

@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon server.js",
     "start:prod": "NODE_ENV=production nodemon server.js"
-  },
+  }, 
   "author": "Ivan Cirkovic",
   "license": "ISC",
   "dependencies": {

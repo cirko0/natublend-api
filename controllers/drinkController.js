@@ -52,7 +52,7 @@ exports.getDrink = catchAsync(async (req, res, next) => {
 
   // HANDLING NOT FOUND ERRORS
   if (!data) {
-    return next(new AppError('No tour found with that ID', 404));
+    return next(new AppError('No drink found with that ID', 404));
   }
 
   res.status(201).json({
@@ -60,6 +60,7 @@ exports.getDrink = catchAsync(async (req, res, next) => {
     data,
   });
 });
+
 
 // Update drink
 
@@ -71,7 +72,7 @@ exports.updateDrink = catchAsync(async (req, res, next) => {
 
   // HANDLING NOT FOUND ERRORS
   if (!data) {
-    return next(new AppError('No tour found with that ID', 404));
+    return next(new AppError('No drink found with that ID', 404));
   }
 
   res.status(201).json({
@@ -88,7 +89,7 @@ exports.deleteDrink = catchAsync(async (req, res, next) => {
 
   // HANDLING NOT FOUND ERRORS
   if (!data) {
-    return next(new AppError('No tour found with that ID', 404));
+    return next(new AppError('No drink found with that ID', 404));
   }
 
   res.status(204).json({
